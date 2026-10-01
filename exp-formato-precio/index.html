@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experimento: formato de presentación del precio — Fuente Clara</title>
+<meta name="description" content="Cinco páginas con el mismo plan y el mismo precio, que varían únicamente en la técnica con la que ese precio se publica en el HTML.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://fuente-clara-sandbox.example.com/exp-formato-precio/">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+
+<header class="sitio">
+  <div class="contenedor">
+    <a href="../index.html"><span class="marca">Fuente Clara</span></a>
+    <div class="bajada">Agua purificada a domicilio, por suscripción · Sitio de prueba</div>
+  </div>
+</header>
+
+<nav class="principal">
+  <div class="contenedor">
+    <a href="../index.html">Inicio</a>
+    <a href="index.html">Formato de precio</a>
+    <a href="../exp-memoria-direccion/index.html">Oficina de atención</a>
+  </div>
+</nav>
+
+<main>
+<div class="contenedor">
+
+  <h1>Experimento 1 — Formato de presentación del precio</h1>
+
+  <p>Cinco páginas describen exactamente el mismo plan de suscripción, con exactamente el mismo
+  precio y el mismo texto de apoyo. Lo único que cambia entre ellas es la técnica con la que el
+  precio queda publicado en el HTML que devuelve el servidor.</p>
+
+  <p>La pregunta que el experimento busca responder es cuál de esas cinco técnicas alcanza para que
+  un rastreador o un agente automatizado lea el precio y lo repita correctamente, y cuál lo deja
+  fuera de su alcance.</p>
+
+  <div class="nota-experimento">
+    <p><strong>Esta página no publica el precio a propósito.</strong> Si lo repitiera, un agente que
+    entra por acá podría llevárselo sin haber leído ninguna de las cinco variantes, y el resultado
+    del experimento dejaría de significar nada. Cada variante hay que consultarla por su URL
+    directa.</p>
+  </div>
+
+  <h2>Las cinco variantes</h2>
+
+  <ul class="tarjetas">
+    <li>
+      <a href="a.html">Variante A — imagen sin atributo alt</a>
+      <span>El precio existe solo como píxeles dentro de una imagen. La etiqueta <code>img</code> no
+      lleva atributo <code>alt</code>, y el precio no aparece transcrito en ninguna otra parte del
+      documento. Es el caso más hostil: para leerlo hay que mirar la imagen.</span>
+    </li>
+    <li>
+      <a href="b.html">Variante B — imagen con alt descriptivo</a>
+      <span>La misma imagen, ahora con un atributo <code>alt</code> que describe el cuadro y
+      transcribe el precio. El precio sigue sin estar en el cuerpo visible del texto, pero viaja en
+      el HTML como texto plano dentro del atributo.</span>
+    </li>
+    <li>
+      <a href="c.html">Variante C — imagen sin alt, más texto plano</a>
+      <span>La misma imagen sin <code>alt</code>, acompañada de un párrafo visible que repite el
+      precio como texto. Es la técnica redundante que recomienda cualquier guía de accesibilidad.</span>
+    </li>
+    <li>
+      <a href="d.html">Variante D — tabla HTML semántica</a>
+      <span>Sin imagen: el precio va en una celda de una tabla con <code>caption</code>,
+      <code>thead</code> y encabezados de fila y columna declarados con <code>scope</code>. Es la
+      línea de base contra la que se comparan las otras cuatro.</span>
+    </li>
+    <li>
+      <a href="e.html">Variante E — imagen sin alt, más JSON-LD</a>
+      <span>La misma imagen sin <code>alt</code>, más un bloque de datos estructurados
+      <code>application/ld+json</code> con <code>schema.org/Product</code> y
+      <code>schema.org/Offer</code>. Para una persona el precio solo está en la imagen; para un
+      lector de datos estructurados está declarado de forma explícita.</span>
+    </li>
+  </ul>
+
+  <h2>Cómo está controlado</h2>
+
+  <ul>
+    <li>Las cinco páginas se generan desde una plantilla única. El texto que rodea al precio es
+    idéntico carácter por carácter, así la técnica de publicación queda como única variable.</li>
+    <li>La imagen es la misma en las variantes A, B, C y E: el mismo archivo servido desde la misma
+    URL, sin diferencias de tamaño ni de contenido.</li>
+    <li>El precio no aparece en ningún título, en ninguna descripción ni en ninguna URL. Si un motor
+    lo repite, lo sacó del cuerpo de la página y no de sus metadatos.</li>
+    <li>Cada variante lleva un código de referencia propio y visible. Al preguntarle a un motor por
+    ese código se puede confirmar qué página leyó realmente, y no solo qué respondió.</li>
+    <li>Las variantes no se enlazan entre sí: desde cada una solo se vuelve al inicio. La única
+    página que las lista a las cinco es esta.</li>
+  </ul>
+
+  <h2>Cómo leer un resultado</h2>
+
+  <p>Que un motor acierte el precio en la variante D no dice gran cosa: es texto plano en una tabla.
+  Lo informativo está en las otras cuatro. Un acierto en A implica lectura del contenido de la
+  imagen. Un acierto en B sin acierto en A ubica el límite en el atributo <code>alt</code>. Un
+  acierto en E sin acierto en A muestra que el motor consume datos estructurados. Y una respuesta
+  correcta en A sin que el motor pueda citar el código de referencia de A sugiere que el precio
+  llegó de otra página del sitio, no de la que se le preguntó.</p>
+
+</div>
+</main>
+
+<footer class="sitio">
+  <div class="contenedor">
+    <p>Fuente Clara — marca ficticia creada para un entorno de prueba. Contenido inventado en su totalidad.</p>
+    <p>Sitio estático, sin cookies, sin analítica y sin contenido dependiente de JavaScript.</p>
+  </div>
+</footer>
+
+</body>
+</html>

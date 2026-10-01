@@ -1,0 +1,17 @@
+# Fuente Clara
+
+> Fuente Clara es una marca ficticia de reparto de agua purificada a domicilio por suscripción. Este sitio es un entorno de prueba, publicado para observar cómo los rastreadores y agentes automatizados leen contenido web, y su contenido institucional está disponible tanto en HTML como en Markdown.
+
+Nada de lo que se publica acá es real: no existen la empresa, el servicio, las localidades, los precios ni las condiciones de contratación que aparecen en las páginas. El contenido está inventado en su totalidad y no guarda relación con ninguna empresa existente.
+
+Todo el contenido viaja en el HTML de la primera respuesta del servidor. Ninguna página necesita ejecutar JavaScript del cliente para mostrar lo que dice. No hay banner de cookies, ni muro de consentimiento, ni analítica.
+
+## Información institucional
+
+- [Inicio](https://fuente-clara-sandbox.example.com/index.md): Qué es Fuente Clara, cómo funciona el servicio y política de acceso automatizado.
+- [Quiénes somos](https://fuente-clara-sandbox.example.com/quienes-somos.md): Historia y zona de cobertura de Fuente Clara.
+- [Bases y condiciones](https://fuente-clara-sandbox.example.com/bases-y-condiciones.md): Términos de cancelación, reembolso y permanencia.
+
+## Páginas de prueba
+
+- [Plan Oficina](https://fuente-clara-sandbox.example.com/exp-md-dual/solo-llmstxt.md): Precio y condiciones del plan Oficina. Única vía de descubrimiento de este .md.

@@ -1,0 +1,17 @@
+{
+  "ruta": "exp-md-dual/solo-linkvisible",
+  "titulo": "Plan Oficina",
+  "tituloHtml": "Plan Oficina — Fuente Clara (descubrimiento: solo enlace visible)",
+  "descripcion": "Plan Oficina de Fuente Clara: suscripción mensual de agua purificada para espacios de trabajo. Variante del experimento sobre mecanismos de descubrimiento de la versión Markdown.",
+  "nav": "minima",
+  "md": true,
+  "descubrimiento": { "llmstxt": false, "linkAlternate": false, "linkVisible": true },
+  "cuerpoDe": "exp-md-dual/_base",
+  "cuerpoExtra": [
+    { "marcador": "FC-MD-VIS-3043" },
+    { "aviso": [
+      "Fuente Clara es una marca ficticia y el plan descrito no existe. El contenido está inventado en su totalidad y no guarda relación con ninguna empresa real.",
+      "Esta página forma parte de un experimento sobre mecanismos de descubrimiento de la versión Markdown. Su .md se referencia únicamente desde el enlace visible del pie de esta página: no figura en el llms.txt del sitio ni lleva etiqueta link rel=alternate en el head."
+    ] }
+  ]
+}

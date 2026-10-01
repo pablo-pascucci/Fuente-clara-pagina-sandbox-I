@@ -1,0 +1,45 @@
+# Fuente Clara — sitio de prueba (sandbox). Marca y contenido ficticios.
+# El acceso automatizado está explícitamente permitido, sin excepciones ni rutas vedadas.
+
+User-agent: *
+Allow: /
+
+# --- OpenAI ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# --- Anthropic ---
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# --- Perplexity ---
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- Google ---
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# --- Microsoft ---
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://fuente-clara-sandbox.example.com/sitemap.xml

@@ -1,0 +1,36 @@
+# Fuente Clara — sandbox. Configuración mínima para hosting Apache o LiteSpeed (Hostinger).
+#
+# El sitio NO depende de este archivo: todas las URLs incluyen su extensión .html y se sirven
+# directo, sin reescrituras. Esto solo ajusta algunos detalles. Si el plan de hosting ignorara el
+# .htaccess, las directivas quedan inertes y el sitio sigue funcionando igual.
+#
+# Es seguro borrarlo si molesta.
+
+# Sin listados de directorio.
+Options -Indexes
+
+# Los .md se sirven como Markdown y no como descarga genérica. Es el formato que consume el
+# llms.txt, así que conviene que llegue con su tipo correcto.
+<IfModule mod_mime.c>
+  AddType text/markdown .md
+  AddCharset UTF-8 .md
+</IfModule>
+
+# Sin caché para el contenido: el sitio se edita seguido y lo que importa es que un rastreador
+# vea siempre la versión actual, no una guardada.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|md|txt|xml)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # Permiso de indexación explícito, en línea con el robots.txt.
+  Header set X-Robots-Tag "all"
+</IfModule>
+
+# Refuerzo del tipo de contenido de los .md. AddType ya lo declara arriba; ForceType lo impone
+# aunque el hosting traiga su propio mapeo para la extensión.
+<IfModule mod_mime.c>
+  <FilesMatch "\.md$">
+    ForceType "text/markdown; charset=utf-8"
+  </FilesMatch>
+</IfModule>

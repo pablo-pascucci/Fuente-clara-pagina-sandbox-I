@@ -1,0 +1,37 @@
+{
+  "dominio": "https://fuente-clara-sandbox.example.com",
+  "idioma": "es",
+  "marca": "Fuente Clara",
+  "bajada": "Agua purificada a domicilio, por suscripción · Sitio de prueba",
+  "textoLinkMd": "Ver esta página en formato Markdown",
+  "navs": {
+    "completa": [
+      { "texto": "Inicio", "destino": "index.html" },
+      { "texto": "Quiénes somos", "destino": "quienes-somos.html" },
+      { "texto": "Bases y condiciones", "destino": "bases-y-condiciones.html" },
+      { "texto": "Formato de precio", "destino": "exp-formato-precio/index.html" },
+      { "texto": "Oficina de atención", "destino": "exp-memoria-direccion/index.html" }
+    ],
+    "institucional": [
+      { "texto": "Inicio", "destino": "index.html" },
+      { "texto": "Quiénes somos", "destino": "quienes-somos.html" },
+      { "texto": "Bases y condiciones", "destino": "bases-y-condiciones.html" }
+    ],
+    "minima": [
+      { "texto": "Inicio", "destino": "index.html" }
+    ]
+  },
+  "footer": [
+    "Fuente Clara — marca ficticia creada para un entorno de prueba. Contenido inventado en su totalidad.",
+    "Sitio estático, sin cookies, sin analítica y sin contenido dependiente de JavaScript."
+  ],
+  "llmstxt": {
+    "titulo": "Fuente Clara",
+    "resumen": "Fuente Clara es una marca ficticia de reparto de agua purificada a domicilio por suscripción. Este sitio es un entorno de prueba, publicado para observar cómo los rastreadores y agentes automatizados leen contenido web, y su contenido institucional está disponible tanto en HTML como en Markdown.",
+    "prosa": [
+      "Nada de lo que se publica acá es real: no existen la empresa, el servicio, las localidades, los precios ni las condiciones de contratación que aparecen en las páginas. El contenido está inventado en su totalidad y no guarda relación con ninguna empresa existente.",
+      "Todo el contenido viaja en el HTML de la primera respuesta del servidor. Ninguna página necesita ejecutar JavaScript del cliente para mostrar lo que dice. No hay banner de cookies, ni muro de consentimiento, ni analítica."
+    ],
+    "secciones": ["Información institucional", "Páginas de prueba"]
+  }
+}

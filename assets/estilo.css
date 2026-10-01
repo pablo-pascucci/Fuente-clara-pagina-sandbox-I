@@ -1,0 +1,53 @@
+/* Fuente Clara — sandbox. CSS plano, sin JS, sin fuentes externas, sin trackers. */
+:root{
+  --tinta:#1a2026; --suave:#5c6b78; --borde:#d5dde3; --fondo:#ffffff;
+  --panel:#f4f7f9; --azul:#10496b; --acento:#0c6e5a; --aviso:#8a5a00;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font-family:Georgia,"Times New Roman",serif; font-size:17px; line-height:1.65;
+}
+.contenedor{max-width:760px; margin:0 auto; padding:0 20px}
+header.sitio{background:var(--azul); color:#fff; padding:22px 0}
+header.sitio a{color:#fff; text-decoration:none}
+header.sitio .marca{font-size:24px; font-weight:bold; letter-spacing:.5px}
+header.sitio .bajada{color:#b9d0e2; font-size:14px; margin-top:2px}
+nav.principal{border-bottom:1px solid var(--borde); padding:10px 0; font-size:15px}
+nav.principal a{color:var(--azul); margin-right:18px}
+main{padding:28px 0 8px}
+h1{font-size:28px; line-height:1.25; margin:0 0 14px}
+h2{font-size:21px; margin:32px 0 10px}
+h3{font-size:17px; margin:22px 0 6px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px; padding-left:22px}
+li{margin-bottom:6px}
+a{color:var(--azul)}
+code{background:var(--panel); padding:1px 5px; border-radius:3px; font-size:14px}
+table{border-collapse:collapse; width:100%; margin:16px 0; font-size:16px}
+caption{text-align:left; color:var(--suave); font-size:14px; padding-bottom:8px}
+th,td{border:1px solid var(--borde); padding:9px 12px; text-align:left; vertical-align:top}
+thead th{background:var(--panel); font-size:14px; text-transform:uppercase; letter-spacing:.4px; color:var(--suave)}
+td.precio{font-size:20px; color:var(--acento); font-weight:bold; white-space:nowrap}
+figure{margin:18px 0}
+figure img{max-width:100%; height:auto; border:1px solid var(--borde)}
+figcaption{color:var(--suave); font-size:14px; margin-top:6px}
+.panel{background:var(--panel); border:1px solid var(--borde); padding:14px 16px; margin:18px 0}
+.panel p:last-child{margin-bottom:0}
+.nota-experimento{border-left:4px solid var(--aviso); background:#fdf8ef; padding:12px 16px; margin:22px 0; font-size:15px}
+.nota-experimento p:last-child{margin-bottom:0}
+.trazador{font-family:ui-monospace,Consolas,monospace; font-size:15px}
+.tarjetas{list-style:none; padding:0; margin:18px 0}
+.tarjetas li{border:1px solid var(--borde); padding:14px 16px; margin-bottom:12px}
+.tarjetas a{font-size:18px; font-weight:bold; text-decoration:none}
+.tarjetas span{display:block; color:var(--suave); font-size:15px; margin-top:4px}
+.dato{margin:18px 0; font-size:18px}
+.dato dt{color:var(--suave); font-size:14px; text-transform:uppercase; letter-spacing:.4px}
+.dato dd{margin:2px 0 14px}
+footer.sitio{border-top:1px solid var(--borde); margin-top:40px; padding:18px 0 40px; color:var(--suave); font-size:14px}
+footer.sitio p{margin:0 0 6px}
+
+/* Enlace visible a la versión Markdown, en el pie. Es contenido real para cualquier visitante:
+   mismo tamaño que el resto del pie, con subrayado, nunca oculto ni disimulado. */
+footer.sitio .ver-md{margin-top:12px}
+footer.sitio .ver-md a{color:var(--azul); text-decoration:underline}
